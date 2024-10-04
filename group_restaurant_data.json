@@ -1,0 +1,68 @@
+{
+    "Cenetta": {
+        "members": [
+            "br1",
+            " scrocca",
+            " salmo",
+            " lalla"
+        ],
+        "restaurants": {
+            "CasaBr1": {
+                "lat": 45.40975728695117,
+                "lon": 8.906042255024516,
+                "reviews": [
+                    {
+                        "reviewer": "br1",
+                        "votes": [
+                            9,
+                            1,
+                            1,
+                            8
+                        ],
+                        "comments": "Bella (neanche troppo), ma non ci vivrei!",
+                        "comment_votes": 1
+                    },
+                    {
+                        "reviewer": "lalla",
+                        "votes": [
+                            10,
+                            0,
+                            2,
+                            6
+                        ],
+                        "comments": "La camera/cuoca assomigliava un sacco alla mia prof di matematica",
+                        "comment_votes": 2
+                    }
+                ]
+            },
+            "CasaScrocca": {
+                "lat": 45.392639475410334,
+                "lon": 8.92121420816554,
+                "reviews": [
+                    {
+                        "reviewer": "br1",
+                        "votes": [
+                            7,
+                            3,
+                            2,
+                            1
+                        ],
+                        "comments": "Ospitalit\u00e0 super! Ma tanta presunzione nel dire che sono nella via pi\u00f9 bella del mondo",
+                        "comment_votes": 1
+                    },
+                    {
+                        "reviewer": "lalla",
+                        "votes": [
+                            3,
+                            8,
+                            9,
+                            4
+                        ],
+                        "comments": "L'oste lavora alle poste",
+                        "comment_votes": 2
+                    }
+                ]
+            }
+        }
+    }
+}
