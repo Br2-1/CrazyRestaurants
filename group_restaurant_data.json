@@ -1,65 +1,132 @@
 {
-    "Cenetta": {
+    "ProvaGruppo": {
         "members": [
-            "br1",
-            " scrocca",
+            "bruno",
+            " andrea",
             " salmo",
             " lalla"
         ],
         "restaurants": {
-            "CasaBr1": {
-                "lat": 45.40975728695117,
-                "lon": 8.906042255024516,
+            "prova1": {
+                "lat": 45.47448385187518,
+                "lon": 9.184768736339686,
                 "reviews": [
                     {
-                        "reviewer": "br1",
+                        "reviewer": "bruno",
                         "votes": [
-                            9,
-                            1,
-                            1,
-                            8
+                            8,
+                            3,
+                            8,
+                            2,
+                            7,
+                            3
                         ],
-                        "comments": "Bella (neanche troppo), ma non ci vivrei!",
-                        "comment_votes": 1
+                        "comments": [
+                            "troppo costoso per quel che ho mangiato!",
+                            "Nulla di che, si puo migliorare tanto",
+                            "Sono uscito che ancora dovevo cenare",
+                            "Servizio impeccabile bravi e non rompi palle",
+                            "Da fuori non lo vedi, ma dentro tutto perfetto!",
+                            "Atmosfera ottimo per gruppo di amici"
+                        ],
+                        "comment": "CI stiamo cagando sotto!",
+                        "comment_votes": 0
                     },
                     {
-                        "reviewer": "lalla",
+                        "reviewer": "andrea",
                         "votes": [
-                            10,
-                            0,
                             2,
+                            6,
+                            6,
+                            7,
+                            4,
                             6
                         ],
-                        "comments": "La camera/cuoca assomigliava un sacco alla mia prof di matematica",
+                        "comments": [
+                            "prezzo giusto, forse un po caro",
+                            "mai mangiato cosi bene!",
+                            "forse le porzioni potrebbero essere pi\u00f9 abbondanti",
+                            "Servizio quasi da sud Italia",
+                            "luci molto fastidiose e musica alta",
+                            "volevo tornare a casa subito"
+                        ],
+                        "comment": "dov'\u00e8 il bagno??",
                         "comment_votes": 2
                     }
                 ]
             },
-            "CasaScrocca": {
-                "lat": 45.392639475410334,
-                "lon": 8.92121420816554,
+            "prova2": {
+                "lat": 45.47111329136012,
+                "lon": 9.154556332902867,
                 "reviews": [
                     {
-                        "reviewer": "br1",
+                        "reviewer": "bruno",
                         "votes": [
                             7,
+                            2,
                             3,
+                            8,
                             2,
                             1
                         ],
-                        "comments": "Ospitalit\u00e0 super! Ma tanta presunzione nel dire che sono nella via pi\u00f9 bella del mondo",
-                        "comment_votes": 1
+                        "comments": [
+                            "bla",
+                            "blabla",
+                            "blablablabla",
+                            "blablabalbalbalbal",
+                            "blabalbalablabalb",
+                            "blablablablablablabla"
+                        ],
+                        "comment": "Solo chi ha la motoooo",
+                        "comment_votes": 2
                     },
                     {
-                        "reviewer": "lalla",
+                        "reviewer": "andrea",
                         "votes": [
-                            3,
+                            2,
                             8,
-                            9,
-                            4
+                            4,
+                            2,
+                            7,
+                            7
                         ],
-                        "comments": "L'oste lavora alle poste",
-                        "comment_votes": 2
+                        "comments": [
+                            "bla",
+                            "blabla",
+                            "blablablabla",
+                            "blablabalbalbalbal",
+                            "blabalbalablabalb",
+                            "blablablablablablabla"
+                        ],
+                        "comment": "eeee va bene cosi",
+                        "comment_votes": 0
+                    }
+                ]
+            },
+            "prova3": {
+                "lat": 45.46557550432616,
+                "lon": 9.158676206098798,
+                "reviews": [
+                    {
+                        "reviewer": "bruno",
+                        "votes": [
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10
+                        ],
+                        "comments": [
+                            "c",
+                            "c",
+                            "c",
+                            "c",
+                            "c",
+                            "c"
+                        ],
+                        "comment": "cc",
+                        "comment_votes": 1
                     }
                 ]
             }
