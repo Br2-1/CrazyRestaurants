@@ -190,6 +190,27 @@
                         ],
                         "comment": "cc",
                         "comment_votes": 1
+                    },
+                    {
+                        "reviewer": "salmo",
+                        "votes": [
+                            5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            5
+                        ],
+                        "comments": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "comment": "",
+                        "comment_votes": 0
                     }
                 ]
             }
