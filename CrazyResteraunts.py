@@ -49,7 +49,7 @@ def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch=
 
 
 # Funzione per salvare i dati in un file JSON
-def save_data():
+def save_data(force_reload=False):
     file_path = "group_restaurant_data.json"
     with open(file_path, "w") as f:
         json.dump(st.session_state['data'], f, indent=4)
