@@ -17,7 +17,7 @@ if 'data' not in st.session_state:
 # Funzione per fare un commit su GitHub
 def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch="main"):
     # Inserisci il tuo token GitHub qui
-    token = st.secrets["github"]["token"] 
+    token = "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"
     url = f"https://api.github.com/repos/{repo}/contents/{path_in_repo}"
 
     # Carica il file da caricare
