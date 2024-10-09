@@ -4,7 +4,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import json
 import os
-
+import requests
+import base64
 # Inizializzazione dei dati
 if 'data' not in st.session_state:
     if os.path.exists("group_restaurant_data.json"):
@@ -13,10 +14,51 @@ if 'data' not in st.session_state:
     else:
         st.session_state['data'] = {}
 
+# Funzione per fare un commit su GitHub
+def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch="main"):
+    # Inserisci il tuo token GitHub qui
+    token = "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"
+    url = f"https://api.github.com/repos/{repo}/contents/{path_in_repo}"
+
+    # Carica il file da caricare
+    with open(file_path, "rb") as f:
+        content = base64.b64encode(f.read()).decode("utf-8")
+    
+    # Ottieni le informazioni correnti del file (necessarie per aggiornare un file esistente)
+    response = requests.get(url, headers={"Authorization": f"token {token}"})
+    response_json = response.json()
+    
+    # Prepara i dati per il commit
+    data = {
+        "message": commit_message,
+        "content": content,
+        "branch": branch,
+    }
+    
+    # Se il file esiste già, aggiungi il "sha" dell'ultimo commit
+    if 'sha' in response_json:
+        data["sha"] = response_json["sha"]
+    
+    # Esegui la richiesta PUT per aggiornare il file
+    response = requests.put(url, json=data, headers={"Authorization": f"token {token}"})
+    
+    if response.status_code == 200 or response.status_code == 201:
+        print("File uploaded successfully.")
+    else:
+        print(f"Error: {response.status_code} - {response.text}")
+
+
 # Funzione per salvare i dati in un file JSON
 def save_data():
-    with open("group_restaurant_data.json", "w") as f:
+    file_path = "group_restaurant_data.json"
+    with open(file_path, "w") as f:
         json.dump(st.session_state['data'], f, indent=4)
+    
+    # Carica il file su GitHub
+    repo = "Br2-1/CrazyRestaurants"  # Il tuo repository
+    path_in_repo = "group_restaurant_data.json"
+    commit_message = "Aggiornamento del file JSON"
+    upload_file_to_github(file_path, repo, path_in_repo, commit_message)
 
 # Funzione per creare un gruppo di amici
 def create_group(group_name, members):
