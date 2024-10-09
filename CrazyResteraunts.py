@@ -54,11 +54,12 @@ def save_data(force_reload=False):
     with open(file_path, "w") as f:
         json.dump(st.session_state['data'], f, indent=4)
     
-    # Carica il file su GitHub
-    repo = "Br2-1/CrazyRestaurants"  # Il tuo repository
-    path_in_repo = "group_restaurant_data.json"
-    commit_message = "Aggiornamento del file JSON"
-    upload_file_to_github(file_path, repo, path_in_repo, commit_message)
+    if force_reload:
+        # Forza l'aggiornamento su GitHub
+        repo = "Br2-1/CrazyRestaurants"
+        path_in_repo = "group_restaurant_data.json"
+        commit_message = "Aggiornamento del file JSON"
+        upload_file_to_github(file_path, repo, path_in_repo, commit_message)
 
 # Funzione per creare un gruppo di amici
 def create_group(group_name, members):
