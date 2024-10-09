@@ -142,6 +142,27 @@
                         ],
                         "comment": "eeee va bene cosi",
                         "comment_votes": 0
+                    },
+                    {
+                        "reviewer": "lalla",
+                        "votes": [
+                            8,
+                            7,
+                            8,
+                            9,
+                            8,
+                            8
+                        ],
+                        "comments": [
+                            "xx",
+                            "xx",
+                            "xxx",
+                            "xxx",
+                            "xxx",
+                            "xx"
+                        ],
+                        "comment": "xxx",
+                        "comment_votes": 0
                     }
                 ]
             },
