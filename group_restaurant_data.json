@@ -51,7 +51,7 @@
                             "volevo tornare a casa subito"
                         ],
                         "comment": "dov'\u00e8 il bagno??",
-                        "comment_votes": 3
+                        "comment_votes": 4
                     },
                     {
                         "reviewer": "salmo",
@@ -72,6 +72,27 @@
                             "c"
                         ],
                         "comment": "c",
+                        "comment_votes": 0
+                    },
+                    {
+                        "reviewer": "lalla",
+                        "votes": [
+                            8,
+                            9,
+                            8,
+                            8,
+                            8,
+                            9
+                        ],
+                        "comments": [
+                            "c",
+                            "cc",
+                            "ccc",
+                            "ccc",
+                            "ccc",
+                            "ccc"
+                        ],
+                        "comment": "ccc",
                         "comment_votes": 0
                     }
                 ]
