@@ -52,6 +52,27 @@
                         ],
                         "comment": "dov'\u00e8 il bagno??",
                         "comment_votes": 2
+                    },
+                    {
+                        "reviewer": "salmo",
+                        "votes": [
+                            5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            5
+                        ],
+                        "comments": [
+                            "c",
+                            "c",
+                            "c",
+                            "c",
+                            "c",
+                            "c"
+                        ],
+                        "comment": "c",
+                        "comment_votes": 0
                     }
                 ]
             },
