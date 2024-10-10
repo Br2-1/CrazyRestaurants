@@ -25,7 +25,7 @@ def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch=
         content = base64.b64encode(f.read()).decode("utf-8")
     
     # Ottieni le informazioni correnti del file (necessarie per aggiornare un file esistente)
-    response = requests.get(url, headers={"Authorization": f"token {token}"})
+    response = requests.get(url, headers={"Authorization": f"Bearer {token}"})
     response_json = response.json()
     
     # Prepara i dati per il commit
@@ -40,7 +40,7 @@ def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch=
         data["sha"] = response_json["sha"]
     
     # Esegui la richiesta PUT per aggiornare il file
-    response = requests.put(url, json=data, headers={"Authorization": f"token {token}"})
+    response = requests.put(url, json=data, headers={"Authorization": f"Bearer {token}"})
     
     if response.status_code == 200 or response.status_code == 201:
         print("File uploaded successfully.")
