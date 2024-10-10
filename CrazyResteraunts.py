@@ -19,7 +19,7 @@ def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch=
     # Inserisci il tuo token GitHub qui
     token = st.secrets["github"]["token"]
     url = f"https://api.github.com/repos/{repo}/contents/{path_in_repo}"
-     if "github" in st.secrets:
+    if "github" in st.secrets:
         st.write("GitHub secrets loaded successfully!")
     else:
         st.error("GitHub secrets not found. Please configure Streamlit secrets.")
