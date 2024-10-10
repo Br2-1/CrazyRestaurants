@@ -2,3 +2,5 @@ streamlit
 pandas
 plotly
 geopy
+gspread
+oauth2client
