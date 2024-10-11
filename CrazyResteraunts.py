@@ -6,13 +6,34 @@ import json
 import os
 import requests
 import base64
-# Inizializzazione dei dati
-if 'data' not in st.session_state:
-    if os.path.exists("group_restaurant_data.json"):
-        with open("group_restaurant_data.json", "r") as f:
-            st.session_state['data'] = json.load(f)
+
+# Funzione per caricare il file JSON da GitHub
+def load_data_from_github(repo, path_in_repo, branch="main"):
+    token = st.secrets["github"]["token"]
+    url = f"https://api.github.com/repos/{repo}/contents/{path_in_repo}?ref={branch}"
+    
+    headers = {"Authorization": f"token {token}"}
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        file_content = base64.b64decode(response.json()['content']).decode("utf-8")
+        return json.loads(file_content)  # Restituisce il contenuto del file come dizionario
     else:
-        st.session_state['data'] = {}
+        return None
+
+# Inizializzazione dei dati all'apertura dell'app
+#if 'data' not in st.session_state:
+# Prova a caricare i dati dal file JSON su GitHub
+repo = "Br2-1/CrazyRestaurants"
+path_in_repo = "group_restaurant_data.json"
+st.session_state['data'] = load_data_from_github(repo, path_in_repo) or {}
+
+#if 'data' not in st.session_state:
+#    if os.path.exists("group_restaurant_data.json"):
+#        with open("group_restaurant_data.json", "r") as f:
+#            st.session_state['data'] = json.load(f)
+#    else:
+#        st.session_state['data'] = {}
 
 # Funzione per fare un commit su GitHub
 def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch="main"):
@@ -48,7 +69,7 @@ def upload_file_to_github(file_path, repo, path_in_repo, commit_message, branch=
 
 
 # Funzione per salvare i dati in un file JSON
-def save_data(force_reload=False):
+def save_data(force_reload=True):
     file_path = "group_restaurant_data.json"
     with open(file_path, "w") as f:
         json.dump(st.session_state['data'], f, indent=4)
@@ -64,7 +85,7 @@ def save_data(force_reload=False):
 def create_group(group_name, members):
     if group_name not in st.session_state['data']:
         st.session_state['data'][group_name] = {'members': members, 'restaurants': {}}
-        save_data()
+        ta()
         st.success(f"Group '{group_name}' successfully created!")
     else:
         st.warning(f"The group '{group_name}' already exists.")
@@ -74,7 +95,7 @@ def add_restaurant_to_group(group_name, restaurant_name, lat, lon):
     group_data = st.session_state['data'][group_name]
     if restaurant_name not in group_data['restaurants']:
         group_data['restaurants'][restaurant_name] = {'lat': lat, 'lon': lon, 'reviews': []}
-        save_data()
+        ta()
         st.success(f"Restaurant '{restaurant_name}' added to the group '{group_name}'!")
     else:
         st.warning(f"The restaurant '{restaurant_name}' already exists in the group '{group_name}'.")
