@@ -22,11 +22,11 @@ def load_data_from_github(repo, path_in_repo, branch="main"):
         return None
 
 # Inizializzazione dei dati all'apertura dell'app
-#if 'data' not in st.session_state:
-# Prova a caricare i dati dal file JSON su GitHub
-repo = "Br2-1/CrazyRestaurants"
-path_in_repo = "group_restaurant_data.json"
-st.session_state['data'] = load_data_from_github(repo, path_in_repo) or {}
+if 'data' not in st.session_state:
+    # Prova a caricare i dati dal file JSON su GitHub
+    repo = "Br2-1/CrazyRestaurants"
+    path_in_repo = "group_restaurant_data.json"
+    st.session_state['data'] = load_data_from_github(repo, path_in_repo) or {}
 
 #if 'data' not in st.session_state:
 #    if os.path.exists("group_restaurant_data.json"):
