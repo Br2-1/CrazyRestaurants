@@ -85,7 +85,7 @@ def save_data(force_reload=True):
 def create_group(group_name, members):
     if group_name not in st.session_state['data']:
         st.session_state['data'][group_name] = {'members': members, 'restaurants': {}}
-        ta()
+        save_data()
         st.success(f"Group '{group_name}' successfully created!")
     else:
         st.warning(f"The group '{group_name}' already exists.")
