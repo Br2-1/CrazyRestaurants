@@ -95,7 +95,7 @@ def add_restaurant_to_group(group_name, restaurant_name, lat, lon):
     group_data = st.session_state['data'][group_name]
     if restaurant_name not in group_data['restaurants']:
         group_data['restaurants'][restaurant_name] = {'lat': lat, 'lon': lon, 'reviews': []}
-        ta()
+        save_data()
         st.success(f"Restaurant '{restaurant_name}' added to the group '{group_name}'!")
     else:
         st.warning(f"The restaurant '{restaurant_name}' already exists in the group '{group_name}'.")
