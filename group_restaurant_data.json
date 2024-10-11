@@ -243,6 +243,12 @@
             " tejo",
             " mati"
         ],
-        "restaurants": {}
+        "restaurants": {
+            "ciao": {
+                "lat": 50.0,
+                "lon": 69.98,
+                "reviews": []
+            }
+        }
     }
 }
