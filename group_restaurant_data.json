@@ -247,7 +247,29 @@
             "ciao": {
                 "lat": 50.0,
                 "lon": 69.98,
-                "reviews": []
+                "reviews": [
+                    {
+                        "reviewer": "",
+                        "votes": [
+                            7,
+                            3,
+                            5,
+                            5,
+                            5,
+                            5
+                        ],
+                        "comments": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "comment": "",
+                        "comment_votes": 0
+                    }
+                ]
             }
         }
     }
