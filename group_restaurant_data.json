@@ -236,5 +236,13 @@
                 ]
             }
         }
+    },
+    "Bella": {
+        "members": [
+            "bruno",
+            " tejo",
+            " mati"
+        ],
+        "restaurants": {}
     }
 }
