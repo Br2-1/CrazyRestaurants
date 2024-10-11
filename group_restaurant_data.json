@@ -211,6 +211,27 @@
                         ],
                         "comment": "",
                         "comment_votes": 0
+                    },
+                    {
+                        "reviewer": "scrocca",
+                        "votes": [
+                            4,
+                            7,
+                            4,
+                            8,
+                            4,
+                            7
+                        ],
+                        "comments": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "comment": "cc",
+                        "comment_votes": 0
                     }
                 ]
             }
