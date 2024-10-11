@@ -361,3 +361,27 @@ if selected_group:
 
         # Mostra la mappa
         st.plotly_chart(fig_map)
+
+# Funzione per caricare il file JSON esistente
+def load_json_file():
+    file_path = "group_restaurant_data.json"
+    if os.path.exists(file_path):
+        with open(file_path, "r") as f:
+            return f.read()  # Legge il file esistente e lo prepara per il download
+    else:
+        return None
+
+# Sezione per il download del file JSON esistente
+st.header("Download Backup")
+json_data = load_json_file()  # Carica il file JSON esistente
+
+if json_data:
+    st.download_button(
+        label="Download JSON Backup",
+        data=json_data,
+        file_name='group_restaurant_data_backup.json',
+        mime='application/json'
+    )
+else:
+    st.warning("No JSON file found to download.")
+
